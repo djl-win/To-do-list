@@ -79,7 +79,11 @@ public class HomepageFragment extends Fragment implements AddItemDialog.OnDialog
         listView.addFooterView(footerView);
 
         //获取当前页面的购物请求
-        getAllItems(selectedStatus);
+        items = shopItemRepository.getUndoneItems();
+        shopItemAdapter = new ShopItemAdapter(getContext(), R.layout.listview_item, items,selectedStatus,this);
+        listView.setAdapter(shopItemAdapter);
+        //显示所有的时间数量
+        getItemsNumberClassifyByDoneUndoneAll();
 
         //上部导航栏监听器
         tabLayoutListener();
@@ -107,10 +111,12 @@ public class HomepageFragment extends Fragment implements AddItemDialog.OnDialog
             items = shopItemRepository.getAllShopItems();
         }
 
-        shopItemAdapter = new ShopItemAdapter(getContext(), R.layout.listview_item, items,selectedStatus,this);
-        listView.setAdapter(shopItemAdapter);
-        shopItemAdapter.notifyDataSetChanged();
+        shopItemAdapter.updateList(selectedStatus,items);
 
+        getItemsNumberClassifyByDoneUndoneAll();
+    }
+
+    private void getItemsNumberClassifyByDoneUndoneAll() {
         // 获取所有项目的个数,0为undone，1为done，2为所有
         int[] itemsNumber = shopItemRepository.selectItemNumbersByStatus();
         if (tabLayout != null) {

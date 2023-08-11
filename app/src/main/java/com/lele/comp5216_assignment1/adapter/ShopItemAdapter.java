@@ -25,6 +25,7 @@ import java.util.Calendar;
 
 
 public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
+
     // 回调接口，获取单机事件的回调
     public interface ItemClickListener {
         void onItemClick(int shopItemId);
@@ -43,6 +44,13 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
         this.status = status;
         this.todayDate = getCurrentDateString();
         this.itemClickListener = listener;
+    }
+
+    public void updateList(int selectedStatus, List<ShopItem> items) {
+        clear(); // 清空当前列表，情况此适配器中列表的所有数据，不清空的话会出现，Position获取的索引出错
+        addAll(items); // 添加新列表，保证列表数据更改之后，视图也刷新之后，数据不会出现错误
+        this.status = selectedStatus;
+        notifyDataSetChanged();
     }
 
     @NonNull

@@ -74,7 +74,12 @@ public class CalendarFragment extends Fragment implements ShopItemAdapter.ItemCl
         // 初始化列表框
         listView = rootView.findViewById(R.id.calendar_list_view);
         // 从数据库查询特定日期的信息
-        getCalendarItems(todayDate);
+
+        // 从数据库查询信息
+        items = shopItemRepository.getItemsByDate(todayDate);
+        // 加载适配器
+        shopItemAdapter = new ShopItemAdapter(getContext(), R.layout.listview_item, items,2,this);
+        listView.setAdapter(shopItemAdapter);
 
     }
 
@@ -92,9 +97,7 @@ public class CalendarFragment extends Fragment implements ShopItemAdapter.ItemCl
         // 从数据库查询信息
         items = shopItemRepository.getItemsByDate(date);
         // 加载列表数据
-        shopItemAdapter = new ShopItemAdapter(getContext(), R.layout.listview_item, items,2,this);
-        listView.setAdapter(shopItemAdapter);
-        shopItemAdapter.notifyDataSetChanged();
+        shopItemAdapter.updateList(2,items);
     }
 
     private void setListener() {
