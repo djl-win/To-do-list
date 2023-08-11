@@ -9,6 +9,7 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ShopItemRepository {
     private ShopItemDao shopItemDao;
@@ -77,7 +78,15 @@ public class ShopItemRepository {
         return calendarDays;
     }
 
+    public List<ShopItem> getItemsByDate(CalendarDay date) {
+        int year = date.getYear();
+        int month = date.getMonth();
+        int day = date.getDay();
+        String format = String.format(Locale.US, "%04d%02d%02d", year, month, day);
+        return shopItemDao.getItemsByDate(format);
+    }
     public void  deleteAll(){
         shopItemDao.deleteAll();
     }
+
 }

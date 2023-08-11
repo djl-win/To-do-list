@@ -101,7 +101,7 @@ public class AddItemDialog extends DialogFragment {
             dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
             // 设置dialog尺寸，并且居于下部
             int width = ViewGroup.LayoutParams.MATCH_PARENT;
-            int height = (int)(getResources().getDisplayMetrics().heightPixels * 0.51); // Set height to 80% of screen height
+            int height = (int)(getResources().getDisplayMetrics().heightPixels * 0.53); // Set height to 80% of screen height
             dialog.getWindow().setLayout(width, height);
             dialog.getWindow().setGravity(Gravity.BOTTOM);
         }

@@ -8,9 +8,11 @@
         android:id="@+id/calendar_view"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:mcv_tileWidth="match_parent"
+        android:layout_gravity="center"
+        app:mcv_tileHeight="match_parent"
         app:mcv_selectionColor="@color/select_date_button_color"
-    />
+        />
+
 
     <LinearLayout
         android:id="@+id/calendar_list"
@@ -18,6 +20,11 @@
         android:layout_height="match_parent"
         android:background="@color/grew"
         android:orientation="vertical">
+        <ListView
+            android:id="@+id/calendar_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/MyTextStyle3"/>
     </LinearLayout>
 
 </LinearLayout>

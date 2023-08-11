@@ -51,6 +51,10 @@ public interface ShopItemDao {
     @Query("SELECT DISTINCT shopItemDate FROM shop_item_table ORDER BY shopItemDate ASC")
     List<String> selectAllDate();
 
+    //查询未完成的清单
+    @Query("SELECT * FROM shop_item_table WHERE shopItemDate = :shopItemDate ORDER BY shopItemDate ASC")
+    List<ShopItem> getItemsByDate(String shopItemDate);
+
     //清空数据库数据
     @Query("DELETE FROM shop_item_table")
     int deleteAll();

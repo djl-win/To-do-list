@@ -93,7 +93,7 @@ public class HomepageFragment extends Fragment implements AddItemDialog.OnDialog
     private void getAllItems(int selectedStatus) {
         // 初始化待办事项列表
         // 应用item布局
-
+        if(shopItemRepository == null) return;
         //未完成项目
         if(selectedStatus == 0) {
             items = shopItemRepository.getUndoneItems();
@@ -233,4 +233,7 @@ public class HomepageFragment extends Fragment implements AddItemDialog.OnDialog
         dialog.show();
     }
 
+    public void triggerGetAllItems() {
+        getAllItems(selectedStatus);
+    }
 }

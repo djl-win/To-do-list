@@ -19,9 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initView();
-        setListener();
-
         // 创建两个Fragment的实例
         homeFragment = new HomepageFragment();
         calendarFragment = new CalendarFragment();
@@ -32,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.fragment_container, calendarFragment)
                 .hide(calendarFragment)
                 .commit();
+
+        initView();
+        setListener();
+
         // 如果保存的实例状态为空，则加载默认的Fragment
         if (savedInstanceState == null) {
             navView.setSelectedItemId(R.id.page_1);  // 设置默认选中项
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                         .hide(calendarFragment)
                         .show(homeFragment)
                         .commit();
+                // 调用获取所有日期的方法
+                triggerGetAllItems();
             } else if (item.getItemId() == R.id.page_2) {
                 getSupportFragmentManager().beginTransaction()
                         .hide(homeFragment)
@@ -66,4 +69,11 @@ public class MainActivity extends AppCompatActivity {
             calendarFragment.triggerDecorateEventDate();
         }
     }
+
+    public void triggerGetAllItems() {
+        if (homeFragment != null) {
+            homeFragment.triggerGetAllItems();
+        }
+    }
+
 }
