@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/list_view_border"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/shop_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:singleLine="true"
+        style="@style/MyTextStyle5"/>
+
+    <TextView
+        android:id="@+id/shop_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyTextStyle6"
+        />
+
+</LinearLayout>

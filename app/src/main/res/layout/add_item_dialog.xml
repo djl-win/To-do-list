@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddItemDialog"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_item_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AddItemInputTextRadius"
+        android:hint="@string/please_input_the_thing_you_want_to_buy"
+        android:layout_marginTop="10dp">
+
+        <!--
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            可获取焦点
+        -->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_item_edit_text"
+            android:layout_width="match_parent"
+            android:hint="@string/please_input_the_thing_you_want_to_buy"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_date_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/dateSelectButton" />
+            <!-- 这是一个空白的View，用于将ImageButton推到右侧 -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/add_item_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paper_airplane_icon"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/add_item"
+                android:enabled="false"
+                style="@style/dateSelectButton"/>
+        </LinearLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

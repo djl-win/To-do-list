@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Comp5216Assignment1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Comp5216Assignment1" parent="Base.Theme.Comp5216Assignment1" >
+        <!--设置status bar的颜色为白色-->
+        <item name="android:statusBarColor">@color/white</item>
+        <!--设置navigation bar的颜色为白色时-->
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:fontFamily">@font/gravity_regular</item>
+        <!--当status bar的颜色为白色时，设置图标可见，通过这个-->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grew">#F4F4F4</color>
+    <color name="hint_font">#B5B5B5</color>
+    <color name="dialog_background_color">#80939393</color>
+    <color name="select_date_button_color">#FF6856A5</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="red">#E85252</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 设置事件指示器的颜色 -->
+    <solid android:color="@color/select_date_button_color" />
+</shape>
