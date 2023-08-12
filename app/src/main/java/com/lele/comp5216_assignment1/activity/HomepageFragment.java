@@ -212,15 +212,15 @@ public class HomepageFragment extends Fragment implements AddItemDialog.OnDialog
         showDimBackground();
         //dialog底部设置为灰色
         activity.getWindow().setNavigationBarColor(ContextCompat.getColor(activity, R.color.dialog_background_color));
-        builder.setTitle("Action");
-        builder.setMessage("Is it marked as completed?");
+        builder.setTitle("操作");
+        builder.setMessage("是否已完成？");
 
-        builder.setNegativeButton("yes", (dialog, which) -> {
+        builder.setNegativeButton("是", (dialog, which) -> {
             // 如果需要的话，在这里放置点击“确认”按钮时的操作
             shopItemRepository.markItemAsDone(shopItemId);
         });
 
-        builder.setPositiveButton("no",  (dialog, which) -> {
+        builder.setPositiveButton("否",  (dialog, which) -> {
             // 如果需要的话，在这里放置点击“确认”按钮时的操作
             shopItemRepository.markItemAsUndone(shopItemId);
         });

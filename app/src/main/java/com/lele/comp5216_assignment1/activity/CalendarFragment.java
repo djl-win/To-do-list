@@ -25,11 +25,14 @@ import com.lele.comp5216_assignment1.repository.ShopItemRepository;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+import com.prolificinteractive.materialcalendarview.format.ArrayWeekDayFormatter;
+import com.prolificinteractive.materialcalendarview.format.MonthArrayTitleFormatter;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class CalendarFragment extends Fragment implements ShopItemAdapter.ItemClickListener {
     private View rootView;  // 定义一个rootView成员变量
@@ -64,6 +67,9 @@ public class CalendarFragment extends Fragment implements ShopItemAdapter.ItemCl
 
     private void initViews() {
         materialCalView = rootView.findViewById(R.id.calendar_view); // 初始化日历组件
+        materialCalView.setTitleFormatter(new MonthArrayTitleFormatter(getResources().getStringArray(R.array.chinese_months)));
+        materialCalView.setWeekDayFormatter(new ArrayWeekDayFormatter(getResources().getStringArray(R.array.chinese_weekdays)));
+
         eventDates = new ArrayList<>(); // 初始化有事件的日期
         // 默认日历显示当前日期
         materialCalView.setDateSelected(CalendarDay.today(), true);
@@ -119,17 +125,17 @@ public class CalendarFragment extends Fragment implements ShopItemAdapter.ItemCl
     @Override
     public void onItemClick(int shopItemId) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Action");
-        builder.setMessage("Is it marked as completed?");
+        builder.setTitle("操作");
+        builder.setMessage("是否已完成？");
 
-        builder.setNegativeButton("yes", (dialog, which) -> {
+        builder.setNegativeButton("是", (dialog, which) -> {
             // 如果需要的话，在这里放置点击“确认”按钮时的操作
             shopItemRepository.markItemAsDone(shopItemId);
             // 从数据库查询特定日期的信息
             getCalendarItems(todayDate);
         });
 
-        builder.setPositiveButton("no",  (dialog, which) -> {
+        builder.setPositiveButton("否",  (dialog, which) -> {
             // 如果需要的话，在这里放置点击“确认”按钮时的操作
             shopItemRepository.markItemAsUndone(shopItemId);
             // 从数据库查询特定日期的信息
