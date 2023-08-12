@@ -3,12 +3,12 @@
 
 A planner App, you can add to-do items by date, and you can view unfinished, completed, and all to-do items. You can mark things as completed or not completed, and view your to-do list by date.
 
-## Table of Contents
-- [Configuration/配置](##Configuration/配置)
-- [Technologies/技术栈](##Technologies/技术栈)
-- [Introduction/介绍](##Introduction/介绍)
-- [Screenshot/屏幕截图](##Screenshot/屏幕截图)
-- [License/证书](##License/证书)
+## Table of Contents/目录
+- [Configuration/配置](#configuration/配置)
+- [Technologies/技术栈](#technologies/技术栈)
+- [Introduction/介绍](#introduction/介绍)
+- [Screenshot/屏幕截图](#screenshot/屏幕截图)
+- [License/证书](#license/证书)
 
 ## Configuration/配置
 - JDK 1.8 
