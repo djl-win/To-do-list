@@ -1,5 +1,5 @@
 # Todo-list 
-一个计划表App，可以通过日期添加待办事项，可查看未完成，已完成，所有的代办事项。可以标记事情已完成、或者未完成，并且根据日期查看代办事项。
+一个计划表App，可以通过日期添加待办事项，可查看未完成，已完成，所有的代办事项。可以标记事情已完成、或者未完成，并且根据日期查看代办事项。 
 A planner App, you can add to-do items by date, and you can view unfinished, and completed, and all to-do items. You can mark things as completed, or not completed, and view your to-do list by date.
 
 # Configuration
@@ -15,6 +15,7 @@ A planner App, you can add to-do items by date, and you can view unfinished, and
 4. 打开Device Manager选择运行的设备： 确保你有一个模拟器或物理设备已连接。 在工具栏上，你会看到一个Tool，打开之后找到Device Manager，列出了所有可用的设备。从那里选择一个。 
 5. 点击运行按钮。这是一个绿色的三角形图标，位于工具栏上。点击它后，Android Studio将构建你的应用并部署到所选的设备。 
 6. 查看运行结果。一旦应用被安装到设备上，它将自动启动。
+
 
 1. Open Android Studio and select "Open an Existing Project" or "Open" from the welcome screen.
 2. Navigate to the project location and select the project root directory, then click "Open".
