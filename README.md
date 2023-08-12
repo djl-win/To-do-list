@@ -4,11 +4,11 @@
 A planner App, you can add to-do items by date, and you can view unfinished, completed, and all to-do items. You can mark things as completed or not completed, and view your to-do list by date.
 
 ## Table of Contents
-- [Configuration/配置](#Configuration/配置)
-- [Technologies/技术栈](#Technologies/技术栈)
-- [Indroduction/介绍](#Indroduction/介绍)
-- [Screenshot/屏幕截图](#Screenshot/屏幕截图)
-- [License/证书](#License/证书)
+- [Configuration/配置](##Configuration/配置)
+- [Technologies/技术栈](##Technologies/技术栈)
+- [Introduction/介绍](##Introduction/介绍)
+- [Screenshot/屏幕截图](##Screenshot/屏幕截图)
+- [License/证书](##License/证书)
 
 ## Configuration/配置
 - JDK 1.8 
@@ -21,7 +21,7 @@ A planner App, you can add to-do items by date, and you can view unfinished, com
 - Gradle
 - Java 8
 
-## Indroduction/介绍
+## Introduction/介绍
 1. 打开Android Studio并选择“Open an Existing Project”或“Open”从欢迎界面。 
 2. 导航至项目的位置并选择项目的根目录，然后点击“Open”。 
 3. 等待项目同步。当你打开项目后，Android Studio会自动尝试同步Gradle以获取所有的依赖关系。在同步过程中，你会在底部的状态栏上看到进度。确保同步成功完成，没有错误。 
