@@ -47,4 +47,4 @@ A planner App, you can add to-do items by date, and you can view unfinished, com
 
 ## License/证书
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](https://github.com/djl-win/To-do-list/blob/master/LICENSE) file for details.
